@@ -17,13 +17,13 @@ public class BasketController {
     }
 
     @GetMapping("/add")
-    public List<Product> addProduct(@RequestParam int productId) {
+    public List<Product> addProduct(@RequestParam List<Integer> productId) {
         return basketService.addProduct(productId);
     }
 
     @GetMapping("/get")
     public List<Product> getBasket() {
-        return  basketService.printBasket();
+        return  basketService.getBasket();
     }
 
 }
